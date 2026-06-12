@@ -20,5 +20,5 @@ services:
 databases:
   - name: auto-diagnose-db
     databaseName: vehicle_repair_prod
-    user: postgres
+    user: db_admin
     plan: free
