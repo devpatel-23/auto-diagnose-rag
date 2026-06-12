@@ -1,0 +1,78 @@
+# docker-compose.yml
+# ============================================================
+# Local development environment.
+# Starts PostgreSQL with pgvector already installed.
+#
+# WHY DOCKER FOR THE DATABASE?
+# Installing PostgreSQL + pgvector natively on every developer's machine
+# is painful (different OS, versions, configs). Docker gives everyone
+# the exact same database environment in one command.
+#
+# HOW TO USE:
+#   Start the database:      docker-compose up -d
+#   Stop the database:       docker-compose down
+#   Wipe and restart fresh:  docker-compose down -v && docker-compose up -d
+#   View DB logs:            docker-compose logs postgres
+#   Connect with psql:       docker-compose exec postgres psql -U postgres -d vehicle_repair_bot
+#
+# After running `docker-compose up -d`, your DATABASE_URL is:
+#   postgresql://postgres:password@localhost:5432/vehicle_repair_bot
+# ============================================================
+
+version: '3.9'
+
+services:
+
+  # ── PostgreSQL with pgvector ──────────────────────────────
+  postgres:
+    # pgvector/pgvector image = PostgreSQL with pgvector pre-installed
+    # Tag format: pg{POSTGRES_VERSION} (e.g. pg16 = PostgreSQL 16)
+    image: pgvector/pgvector:pg16
+
+    container_name: vehicle_repair_postgres
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: vehicle_repair_bot
+
+    ports:
+      # HOST:CONTAINER — access from your machine at localhost:5432
+      - "5432:5432"
+
+    volumes:
+      # Persist data between restarts
+      # Without this, all data is lost when the container stops
+      - postgres_data:/var/lib/postgresql/data
+
+      # Auto-run SQL on first startup
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d vehicle_repair_bot"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ── pgAdmin — visual database browser (optional) ─────────
+  # Access at http://localhost:5050
+  # Login: admin@admin.com / admin
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: vehicle_repair_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    profiles:
+      # Only starts if you explicitly request it:
+      # docker-compose --profile admin up -d
+      - admin
+
+volumes:
+  postgres_data:
+    driver: local

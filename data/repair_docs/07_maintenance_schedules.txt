@@ -1,0 +1,148 @@
+VEHICLE MAINTENANCE SCHEDULES AND SERVICE INTERVALS
+=====================================================
+
+UNIVERSAL MAINTENANCE SCHEDULE
+--------------------------------
+
+EVERY OIL CHANGE (3,000-10,000 miles depending on oil type):
+- Engine oil and filter
+- Check all fluid levels (coolant, brake, power steering, transmission)
+- Inspect belts (look for cracking, fraying, glazing)
+- Inspect hoses (squeeze — should be firm, not spongy or hard/cracking)
+- Check air filter (replace if visibly dirty)
+- Inspect tire pressure and condition
+- Check lights (headlights, taillights, turn signals)
+
+EVERY 15,000-30,000 MILES:
+- Air filter replacement (sooner if in dusty environment)
+- Cabin air filter replacement
+- Tire rotation
+- Brake inspection (measure pad thickness and rotor condition)
+- Battery test (especially after 3 years)
+- Inspect CV boots for tears
+- Inspect brake lines for corrosion
+
+EVERY 30,000 MILES:
+- Fuel filter replacement (if separate unit — many modern vehicles have in-tank filters)
+- Spark plugs (if copper type)
+- Transmission fluid service (many manufacturers say "lifetime" — change it anyway)
+- Coolant flush (test with coolant test strips)
+- Power steering fluid flush
+- Transfer case fluid (4WD/AWD)
+- Differential fluid (front and rear)
+- Inspect/replace PCV valve
+
+EVERY 60,000 MILES:
+- Spark plugs (platinum type)
+- Timing belt replacement (interference engines — check model specific)
+  Also replace: Water pump, tensioner, idler pulleys, thermostat
+- Brake fluid flush
+- Inspect motor mounts
+- Inspect steering rack boots
+
+EVERY 90,000-100,000 MILES:
+- Spark plugs (iridium type)
+- Coolant hoses replacement (preventive — hoses can look fine but degrade internally)
+- Serpentine belt replacement (if not done sooner)
+- Inspect wheel bearings
+- Transmission fluid (again, regardless of previous service)
+- Full brake system inspection (calipers, lines, hardware)
+
+MANUFACTURER-SPECIFIC INTERVALS
+---------------------------------
+
+HONDA / ACURA:
+- Honda Maintenance Minder system: Oil life algorithm triggers service.
+  A = Oil change
+  B = Oil + rotate + brakes + parking brake + steering
+  1 = Tire rotation
+  2 = Air filter, cabin filter, drive belt, pollen filter
+- Timing belt (V6 models): 105,000 miles (CRITICAL — interference engine)
+- Honda 4-cylinder (K-series): Timing chain — no replacement needed.
+- Honda transmission fluid: Use ONLY Honda ATF-DW1. Other fluids cause shudder.
+- Recommended oil: Honda 0W-20 (2010+ models)
+
+TOYOTA / LEXUS:
+- Very robust maintenance schedule.
+- 2GR-FE V6 timing chain: No scheduled replacement.
+- 2AZ-FE 4-cylinder: Known for oil consumption — check level frequently.
+- Toyota ATF: Use Toyota WS fluid ONLY.
+- Common issue: 3.5L 2GR-FE oil leak at VVTi actuator hose (oil pressure hose to cam gear).
+- 4.7L 2UZ-FE V8: Timing belt — replace at 90,000 miles (with water pump).
+
+FORD:
+- EcoBoost engines: Carbon buildup on intake valves (direct injection) — walnut blast or solvent treatment at 60-80k miles.
+- 6.7L Power Stroke Diesel: Fuel filter at every 15,000 miles (or 1 year). Very important.
+- 5.0L Coyote: Excellent timing chain — monitor oil level, use full synthetic 5W-20.
+- 6R80 transmission: Ford Mercon LV fluid ONLY.
+- Common: Thermostat housing failures on V6 EcoBoost — coolant leak at front of engine.
+
+CHEVROLET / GMC:
+- LS/LT engines: Excellent — use 5W-30 Dexos certified oil.
+- GM 6L80/8L90 automatic: Use Dexron VI ONLY.
+- 6.6L Duramax Diesel: Fuel filter at 22,500 miles. Water separator drain every 15,000 miles.
+- AFM/DOD system (active fuel management): Failures common — use oil catch can, consider AFM delete.
+- Common: Oil consumption in AFM-equipped engines — monitor and use correct Dexos oil.
+
+BMW:
+- BMW Condition Based Service (CBS): Computer monitors actual wear.
+- Oil service: Every 10,000-15,000 miles with BMW-approved oil (LL-01 spec).
+  CRITICAL: BMW requires 5W-30 or 0W-30 LL-01 rated oil — generic oils may not qualify.
+- N52/N54/N55 engine: Coolant flush every 4 years. Use BMW coolant.
+- N54 engine: High pressure fuel pump (HPFP) failure common — has TSB/recall.
+- Timing chain: N20 engine (2012-2016) known for timing chain stretch failure — preventive replacement recommended before 80,000 miles.
+- Brake fluid: Every 2 years regardless of mileage (BMW requires this).
+
+MERCEDES-BENZ:
+- Service A: Every 10,000 miles — oil, filter, inspection.
+- Service B: Every 20,000 miles — all of A plus air filter, cabin filter, brake fluid.
+- Transmission fluid: 7G-Tronic uses 236.14 spec fluid — DO NOT use generic ATF.
+- 3.0L BlueTEC diesel: DEF (AdBlue) refill needed — don't let run empty (engine deslates).
+- Common: Air suspension failures (S-Class, E-Class, ML) — struts, compressor, air lines.
+
+DIESEL MAINTENANCE (GENERAL)
+-------------------------------
+Diesel engines require:
+- Fuel filters: More frequent than gasoline (every 10,000-15,000 miles typically).
+- Water separator: Drain at every fuel filter change or as warning light indicates.
+- Glow plugs: Replace as preventive maintenance at 100,000 miles (cold start issues if failed).
+- EGR system: More prone to carbon buildup — cleaning or delete kits common.
+- DPF (Diesel Particulate Filter): Modern diesels — needs highway driving for regeneration. City driving only clogs DPF. Forced regeneration with scan tool when restricted.
+- DEF/AdBlue: SCR system — refill as needed (approx every 3,000-5,000 miles). Never let run empty.
+- Injector cleaning: Every 30,000-50,000 miles recommended.
+
+PRE-PURCHASE INSPECTION CHECKLIST
+------------------------------------
+Before buying a used vehicle:
+Engine:
+[ ] Check oil level and color (black/sludgy = neglect; milky = coolant)
+[ ] Check coolant level and color (should be bright, not brown/rusty)
+[ ] Start cold — note smoke color (blue=oil, white=coolant, black=rich)
+[ ] Rev engine — listen for knocks, ticks, rattles
+[ ] Check for oil leaks under vehicle
+[ ] Compression test (for serious purchases)
+[ ] Full OBD-II scan (check codes AND readiness monitors)
+
+Transmission:
+[ ] Test all gears including reverse
+[ ] Note any hesitation, harsh shifts, slipping
+[ ] Check fluid (color and smell)
+[ ] 4WD/AWD: Test all modes
+
+Body and Rust:
+[ ] Inspect rockers, floor pans, wheel arches, frame
+[ ] Check panel gaps and alignment (accident indicators)
+[ ] Look for overspray (repainted panels after repair)
+[ ] Magnet test for filler/fiberglass repairs
+
+Electronics:
+[ ] Verify all lights work
+[ ] Test A/C and heat
+[ ] Check all power accessories
+[ ] Verify OBD-II readiness monitors are set (recently cleared codes = problem)
+  Note: 0/8 monitors ready on scan tool = codes were just cleared — ask why
+
+Inspection:
+[ ] Professional pre-purchase inspection ($100-150 — always worth it)
+[ ] Vehicle history report (Carfax or AutoCheck — check for accidents, flood, odometer)
+[ ] Check service records if available

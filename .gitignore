@@ -1,0 +1,47 @@
+# Environment — NEVER commit these
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Chainlit
+.chainlit/
+frontend/.chainlit/translations/
+
+# Logs
+*.log
+logs/
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Database (never commit SQLite files if used locally)
+*.db
+*.sqlite
+
+# Node (if any frontend assets)
+node_modules/

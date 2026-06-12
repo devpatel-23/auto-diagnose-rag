@@ -1,0 +1,118 @@
+VEHICLE ENGINE DIAGNOSTICS AND REPAIR GUIDE
+===========================================
+
+SECTION 1: ENGINE OVERHEATING
+-------------------------------
+Symptoms: Temperature gauge rises above normal, steam from hood, coolant smell, engine warning light.
+
+Causes and Solutions:
+1. Low Coolant Level
+   - Check coolant reservoir when engine is COLD only. Never open radiator cap on hot engine.
+   - Top up with 50/50 mix of coolant and distilled water.
+   - If coolant keeps dropping, suspect a leak — check hoses, water pump, radiator, head gasket.
+
+2. Thermostat Failure
+   - Thermostat stuck closed = coolant can't flow = overheating.
+   - Test: Cold start, feel upper radiator hose. If it stays cold for 10+ minutes, thermostat is stuck.
+   - Replacement: Drain partial coolant, remove housing, replace thermostat with OEM spec, refill and bleed system.
+
+3. Radiator Blockage
+   - Symptoms: Car overheats in traffic, fine at highway speeds.
+   - Flush radiator with flush solution, reverse flush hose method.
+   - Replace if fins are crushed or internal blockage confirmed.
+
+4. Water Pump Failure
+   - Signs: Coolant leak from front of engine, whining noise, visible corrosion on pump.
+   - Check: Shake the water pump pulley — any play means bearing failure.
+   - Replacement interval: Usually at timing belt change (60,000-100,000 miles).
+
+5. Head Gasket Failure (CRITICAL)
+   - Signs: White smoke from exhaust, milky oil (chocolate milk color on dipstick), coolant loss with no visible leak, bubbles in coolant reservoir.
+   - Test: Combustion leak test using test fluid that changes color.
+   - This is a major repair — engine must be partially disassembled. DO NOT continue driving.
+
+SECTION 2: OIL SYSTEM
+-----------------------
+Oil Pressure Warning Light:
+- If oil light comes on while driving, PULL OVER IMMEDIATELY and turn off engine.
+- Check oil level with dipstick (engine off, on level ground).
+- Low oil: Top up immediately with correct viscosity (check owner's manual, typically 5W-30 or 0W-20).
+- Correct oil level but light on: Oil pressure sensor may be faulty OR internal oil pump failure — do not drive, tow to shop.
+
+Oil Change Intervals:
+- Conventional oil: Every 3,000-5,000 miles
+- Synthetic oil: Every 7,500-10,000 miles
+- Full synthetic (modern engines): Every 10,000-15,000 miles
+- Always check owner's manual for manufacturer spec.
+
+Oil Types by Application:
+- 0W-20: Modern fuel-efficient engines, cold climates
+- 5W-30: Most common, good for variety of climates
+- 10W-40: Older engines, hot climates
+- 15W-40: Heavy duty diesel engines
+
+SECTION 3: STARTING PROBLEMS
+------------------------------
+Engine Cranks but Won't Start:
+1. No fuel: Check fuel gauge, listen for fuel pump hum when key is turned to ON position (not START).
+2. Bad spark: Remove spark plug, ground it, crank — look for blue spark. Weak/no spark = ignition problem.
+3. No compression: Perform compression test. Below 100 PSI per cylinder = worn rings or valve issue.
+4. Flooded engine: Hold throttle fully open and crank for 10 seconds to clear excess fuel.
+
+Engine Won't Crank:
+1. Dead battery: Test voltage — should be 12.6V at rest. Below 12.0V = discharged.
+2. Bad starter motor: Click sound but no crank = starter relay or solenoid. No sound at all = check battery connections.
+3. Neutral safety switch: Automatic transmission won't start in gear — try neutral.
+4. Immobilizer/security: Flashing security light = key chip issue.
+
+SECTION 4: COMMON OBD-II FAULT CODES
+---------------------------------------
+P0300 - Random/Multiple Cylinder Misfire
+  Causes: Bad spark plugs, ignition coils, fuel injectors, low compression, vacuum leak.
+  Fix sequence: 1) Replace spark plugs 2) Test ignition coils 3) Test injectors 4) Check for vacuum leaks.
+
+P0171 / P0174 - System Too Lean (Bank 1 / Bank 2)
+  Causes: Vacuum leak, dirty MAF sensor, weak fuel pump, clogged fuel filter, faulty O2 sensor.
+  Fix: Clean MAF sensor with MAF cleaner spray. Check all vacuum hoses for cracks. Check fuel pressure.
+
+P0420 - Catalyst System Efficiency Below Threshold (Bank 1)
+  Causes: Failing catalytic converter, exhaust leak before cat, faulty O2 sensors.
+  Note: First check for exhaust leaks and O2 sensors before replacing catalytic converter (expensive).
+
+P0128 - Coolant Temperature Below Thermostat Regulating Temperature
+  Causes: Thermostat stuck open (engine never reaches operating temp).
+  Fix: Replace thermostat. Usually inexpensive repair.
+
+P0455 - Large Evaporative Emission System Leak
+  Causes: Loose or missing gas cap (most common), cracked EVAP hose, faulty purge valve.
+  Fix: First, tighten or replace gas cap. Clear code, drive 2-3 days, see if it returns.
+
+P0101 - Mass Air Flow Sensor Range/Performance
+  Causes: Dirty or faulty MAF sensor, air filter extremely dirty, air leak after MAF.
+  Fix: Clean MAF sensor. Replace air filter. Check intake tube for cracks.
+
+SECTION 5: TIMING BELT/CHAIN SERVICE
+---------------------------------------
+Timing Belt (rubber, must be replaced on schedule):
+- Interference engines: Belt failure = destroyed engine (valves hit pistons). CRITICAL service.
+- Typical interval: Every 60,000-100,000 miles (check model-specific).
+- Common brands needing timing belt: Honda, Toyota (older), Volkswagen, Audi, Subaru.
+- Also replace at same time: Water pump, tensioner, idler pulleys, thermostat.
+
+Timing Chain (metal, generally maintenance-free):
+- Signs of wear: Rattling noise on cold start (chain slap), P0008/P0009/P0016 codes.
+- More common in: Ford, GM, Chevrolet, BMW, Mercedes modern engines.
+- Chain stretch can cause timing issues before complete failure.
+
+SECTION 6: FUEL SYSTEM
+------------------------
+Fuel Injector Cleaning:
+- Symptoms of dirty injectors: Rough idle, poor fuel economy, hesitation on acceleration, failed emissions.
+- DIY method: Use fuel injector cleaner additive in tank (mild).
+- Professional method: Off-car ultrasonic cleaning (best).
+- Replacement: When injectors fail flow test or leak.
+
+Fuel Pump Failure:
+- Symptoms: Engine cranks but won't start, stalling at highway speed, whining noise from fuel tank.
+- Test: Check fuel pressure at rail with gauge (should be 40-60 PSI for most fuel injected engines).
+- Replacement: Usually accessible through trunk floor or under rear seat. Drop tank if not.

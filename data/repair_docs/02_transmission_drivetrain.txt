@@ -1,0 +1,108 @@
+TRANSMISSION AND DRIVETRAIN REPAIR GUIDE
+=========================================
+
+SECTION 1: AUTOMATIC TRANSMISSION
+------------------------------------
+Common Symptoms and Causes:
+
+Slipping Gears (RPM rises but car doesn't accelerate proportionally):
+- Low or burnt transmission fluid — check dipstick, fluid should be red/pink and not smell burnt.
+- Worn clutch packs inside transmission.
+- Failing transmission solenoids.
+- Fix: First drain and refill transmission fluid with OEM-spec fluid. If slipping continues, transmission service or rebuild needed.
+
+Delayed Engagement (long pause before drive/reverse engages):
+- Low fluid, cold fluid in winter, or worn valve body.
+- Let engine warm up 30-60 seconds before driving in cold weather.
+- Check fluid level and condition.
+
+Harsh or Rough Shifting:
+- Wrong fluid type used.
+- Worn throttle position sensor causing incorrect shift points.
+- Faulty shift solenoids.
+- Check transmission fluid level and type first.
+
+Transmission Fluid Service:
+- Check interval: Every 30,000-60,000 miles (not "lifetime" regardless of what manual says).
+- Fluid color guide:
+  * Bright red/pink = Good
+  * Dark red = Getting old, service soon
+  * Brown/black = Urgent service needed
+  * Milky/foamy = Water contamination (serious — check for cooler line leak)
+- Always use manufacturer-specified fluid (Dexron, Mercon, ATF+4 etc — these are NOT interchangeable).
+
+SECTION 2: MANUAL TRANSMISSION
+---------------------------------
+Clutch System:
+
+Clutch Slipping (high RPM, poor acceleration, burning smell):
+- Worn clutch disc (friction material worn to rivets).
+- Oil contamination on clutch (rear main seal or transmission input shaft seal leak).
+- Clutch replacement: Full kit — disc, pressure plate, throw-out bearing, pilot bearing.
+- Clutch life: Typically 80,000-150,000 miles depending on driving style.
+
+Clutch Pedal Issues:
+- Soft/spongy pedal (hydraulic clutch): Air in hydraulic line — bleed clutch slave cylinder.
+- High pedal engagement: Adjust clutch pedal free play (cable system) or check hydraulic components.
+- Clutch pedal sticks to floor: Clutch slave cylinder failure.
+
+Gear Grinding:
+- Synchronizer rings worn (inside transmission).
+- Low gear oil — check manual transmission fluid level.
+- Synchro problem: Usually isolated to one gear (e.g., 2nd gear grind = 2nd gear synchro).
+
+Manual Transmission Fluid:
+- Most use 75W-90 GL-4 gear oil (check model specific — some use engine oil or ATF).
+- Change interval: Every 30,000-50,000 miles.
+
+SECTION 3: DIFFERENTIAL AND AXLES
+------------------------------------
+Differential Noise (whining, howling on deceleration/acceleration):
+- Low gear oil in differential.
+- Worn ring and pinion gears.
+- Worn carrier bearings.
+- Check/change differential fluid first (75W-90 or 75W-140 for limited-slip).
+
+Limited Slip Differential (LSD) Chatter:
+- Symptom: Chattering/shuddering in tight turns.
+- Cause: Wrong fluid (must use LSD-specific additive or LSD-rated fluid).
+- Fix: Drain and refill with correct LSD fluid. Do not use standard gear oil in LSD without additive.
+
+CV Axle (Front-Wheel Drive and AWD):
+- Clicking noise on turns = outer CV joint failure (torn CV boot, grease contaminated).
+- Clunking on acceleration = inner CV joint failure.
+- Inspection: Check rubber boots — if cracked or torn, replace before joint fails.
+- Replacement: Remanufactured axle shaft assembly (cost-effective), or rebuild with new CV joints and boots.
+
+SECTION 4: FOUR-WHEEL DRIVE / AWD SYSTEMS
+-------------------------------------------
+Transfer Case Service:
+- Check fluid: Should be changed every 30,000-50,000 miles.
+- Symptoms of low/dirty fluid: Whining, hesitation to engage 4WD.
+- Common fluids: ATF (some), specific transfer case fluid (others) — check manual.
+
+4WD Engagement Issues:
+- 4WD won't engage: Check shift linkage, vacuum lines (on older systems), or electronic actuator.
+- Grinding when engaging: Do NOT engage 4WD on dry pavement — use only on slippery or loose surfaces.
+- 4WD stuck engaged: Actuator fault, binding in transfer case.
+
+AWD System Binding:
+- Binding/hopping in turns with AWD: Tire size mismatch across axles (even temporary spare causes this).
+- Ensure all 4 tires are same brand/model/size and worn evenly.
+
+SECTION 5: DRIVESHAFT AND U-JOINTS
+-------------------------------------
+U-Joint Failure Symptoms:
+- Clunking/vibration when accelerating or decelerating (especially from stop).
+- Vibration at specific speed that gets worse.
+- Visible rust, play, or dried grease on U-joint caps.
+
+U-Joint Replacement:
+- Mark driveshaft orientation before removal (balance marks).
+- Use proper U-joint press tool to remove bearing caps.
+- Pack new U-joint with grease before installation.
+- Check center bearing (carrier bearing) on two-piece driveshafts.
+
+Driveshaft Balance:
+- Vibration that increases with speed = balance issue (after U-joint work, accident, or bent shaft).
+- Requires driveshaft balancing machine at driveline shop.

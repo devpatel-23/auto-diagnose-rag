@@ -1,0 +1,54 @@
+[
+  {
+    "description": "OBD code diagnosis",
+    "messages": [
+      {
+        "role": "user",
+        "content": "My 2016 Toyota Camry 2.5L has a P0420 code. Check engine light is on. What does this mean and what should I do?"
+      },
+      {
+        "role": "assistant",
+        "content": "P0420 means the catalytic converter on Bank 1 isn't cleaning exhaust gases efficiently enough — specifically, the downstream oxygen sensor is seeing too much activity (similar pattern to the upstream sensor), which tells the ECU the cat isn't doing its job.\n\n**Before assuming it's the catalytic converter (expensive), work through this diagnostic sequence:**\n\n1. **Check for exhaust leaks first** — an exhaust leak before the downstream O2 sensor lets fresh air in, fooling the sensor into thinking the cat is failing. Inspect the manifold gasket, flex pipe, and any welds/joints before the sensor.\n\n2. **Check both O2 sensors** — the 2016 Camry 2AZ-FE commonly has O2 sensor degradation around 100k miles. Use a live data scan tool and watch the downstream sensor voltage. It should be relatively steady (around 0.6-0.7V). If it's oscillating rapidly like the upstream sensor, the sensor itself may be faulty.\n\n3. **Check for oil consumption** — the 2.5L 2AR-FE engine (your year's engine) has a known tendency to consume oil. Oil burning coats and poisons catalytic converters over time. Check your oil level and condition.\n\n4. **If all above check out, the cat is genuinely failing** — OEM Toyota cats cost $400-600, aftermarket $150-300. Note: cheap aftermarket cats often throw P0420 again within 6-12 months. Toyota OEM or an OBD-II compliant aftermarket (CARB-certified if you're in California) is worth the extra cost.\n\nEstimated repair costs:\n- O2 sensor replacement: $80-180 parts + 1hr labor\n- Catalytic converter: $400-800 parts + 1-2hr labor\n\nDo you know your current mileage and whether the oil level has been dropping?"
+      }
+    ]
+  },
+  {
+    "description": "Classic restoration advice",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I just bought a 1969 Chevrolet Camaro project car. It runs but has significant rust in the floor pans and rockers. Where do I start?"
+      },
+      {
+        "role": "assistant",
+        "content": "Congratulations on the first-gen Camaro — a great platform to work with. Floor pans and rockers are the most common rust areas on these cars, so you're in good company.\n\n**Start here — full assessment before touching anything:**\n\nBefore you buy a single piece of metal, get under the car with a bright light and a screwdriver. Probe every suspect area. You need to know the full extent of the rust, because discovering more after you've already started welding changes your plan and budget significantly.\n\nSpecifically check:\n- **Frame rails** (the full length, front to rear) — frame rust on a unibody Camaro changes the entire scope of the project\n- **Torque boxes** (front and rear corners where the frame rails meet the body) — critical structural points that rust badly\n- **Inner rockers** — these are behind the outer cosmetic rockers and are part of the structural skeleton\n- **Lower firewall** and floor pan front section\n- **Trunk floor** and spare tire well\n\n**Recommended order of operations:**\n\n1. **Strip the interior completely** — carpet, seats, sound deadening, everything. You can't properly assess or weld floor pans with stuff in the way.\n\n2. **Address structural rust first** — floor pans, torque boxes, frame rails. There's no point doing a perfect body-off paint job if the structure underneath fails later.\n\n3. **Source panels early** — AMD (Auto Metal Direct) and Classic Industries make quality reproduction floor pans, rocker panels, and torque boxes for first-gen Camaros. These are cut-and-weld replacements, not patch panels.\n\n4. **Consider a rotisserie** — for floor pan work especially, welding from underneath a car on jack stands is miserable and produces worse welds. A rotisserie rotates the car so you're always welding in a comfortable position.\n\n**Tools you'll need:**\n- MIG welder (minimum 140A — Lincoln Electric 180 or Miller 211 are solid choices)\n- 4.5\" angle grinder with flap discs and cut-off wheels\n- Body saw or air chisel for removing old panels\n- Weld-through primer\n- Seam sealer for finishing\n\nWhat's the condition of the frame rails? And is this intended as a driver, restomod, or show car? That affects how you approach the body work."
+      }
+    ]
+  },
+  {
+    "description": "Transmission problem diagnosis",
+    "messages": [
+      {
+        "role": "user",
+        "content": "My 2012 Ford F-150 5.0L automatic is slipping between 2nd and 3rd gear. It feels like it revs up then catches. When does it usually happen?"
+      },
+      {
+        "role": "assistant",
+        "content": "That rev-flare between gears is a classic sign of a slipping shift, and the 6R80 transmission in your 5.0L F-150 has some known behaviours worth working through systematically.\n\n**Step 1 — Check the transmission fluid immediately**\n\nThis is the single most common cause of shift slipping and the cheapest fix by a large margin.\n\n- Engine warm, truck in Park on level ground\n- Check fluid level on the dipstick\n- More importantly: **check the colour and smell**\n  - Healthy: bright red/pink\n  - Needs service: dark red or brownish\n  - Urgent: brown/black or burnt smell — the clutch packs may already be damaged\n\nFluid type: **Mercon LV only** — do not use generic ATF or Mercon V. The 6R80 is sensitive to fluid type and wrong fluid causes exactly this kind of shift behaviour.\n\n**Step 2 — Check for transmission codes**\n\nScanning with a proper OBD-II reader will often show shift solenoid codes (P0750-P0775) or pressure codes even before a shift slip becomes obvious. A Ford-specific scanner gives you more data than generic readers.\n\n**Step 3 — Transmission service**\n\nIf the fluid is dark or the truck is over 60k miles without a service:\n- Pan drop and filter replacement\n- Refill with fresh Mercon LV\n- This alone resolves many 6R80 shift complaints\n\n**Step 4 — If service doesn't resolve it**\n\nThe 6R80 has a known issue with the 2-3 shift solenoid (SSB) wearing out on higher-mileage trucks. Symptoms match yours exactly. A transmission shop can do a solenoid test — replacing just the SSB is far cheaper than a rebuild.\n\n**What to avoid:**\n- Don't continue driving hard with a slipping transmission — each slip event damages the clutch packs\n- Don't use transmission additives/stop-slip products — they mask the problem and can damage seals\n\nWhat's the mileage and when was the last transmission service?"
+      }
+    ]
+  },
+  {
+    "description": "Basic maintenance question",
+    "messages": [
+      {
+        "role": "user",
+        "content": "How often should I change the oil on my 2020 Honda Civic 1.5T? And what oil does it take?"
+      },
+      {
+        "role": "assistant",
+        "content": "The 2020 Civic 1.5T (L15B7 turbocharged engine) has some specific requirements worth knowing.\n\n**Oil Specification:**\n- **0W-20 full synthetic** — this is not optional on the 1.5T. The tight tolerances and turbo mean thicker oil won't flow fast enough on cold starts.\n- Honda recommends their own Honda Genuine Motor Oil, but any 0W-20 full synthetic meeting API SN Plus or SP spec works fine (Mobil 1, Pennzoil Platinum, Castrol Edge).\n- **Avoid conventional or synthetic-blend** — the 1.5T runs hot and needs full synthetic protection\n\n**Oil Capacity:** 3.7 quarts with filter change\n\n**Change Interval:**\n- Honda's Maintenance Minder system will tell you when it's due (oil life % displayed on dash)\n- Typical interval: **every 5,000-7,500 miles** with full synthetic under normal driving\n- Severe conditions (lots of short trips under 10 miles, extreme cold, towing): 5,000 miles\n\n**Important note specific to the 1.5T:**\nThis engine has a known issue with **oil dilution** — in cold climates, unburned fuel can wash past the rings into the oil, thinning it. Honda extended the warranty on this and updated the PCM calibration, but if you're in a cold climate doing mostly short trips:\n- Check your oil level and smell it periodically between changes\n- If the oil smells strongly of gasoline, change it earlier regardless of the Maintenance Minder\n- More highway driving helps — it heats the engine enough to boil off the diluted fuel\n\nThe Maintenance Minder system is genuinely good — trust it, but err toward shorter intervals (5,000 miles) if you do a lot of city/short-trip driving."
+      }
+    ]
+  }
+]

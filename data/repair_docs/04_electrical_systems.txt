@@ -1,0 +1,124 @@
+VEHICLE ELECTRICAL SYSTEMS REPAIR GUIDE
+========================================
+
+SECTION 1: BATTERY AND CHARGING SYSTEM
+-----------------------------------------
+Battery Testing:
+- Resting voltage: 12.6V = fully charged, 12.4V = 75%, 12.2V = 50%, below 12V = replace.
+- Load test: Apply half of CCA rating as load for 15 seconds — should maintain 9.6V minimum.
+- Battery age: Most last 3-5 years. Hot climates reduce life significantly.
+- Signs of bad battery: Slow cranking, lights dim when starting, swollen case, corrosion on terminals.
+
+Battery Terminal Corrosion:
+- White/blue/green powder on terminals = corrosion (reduces conductivity).
+- Clean with baking soda and water on a brush.
+- Apply terminal protector spray or anti-corrosion grease after cleaning.
+- Loose terminals cause intermittent no-start, check tightness.
+
+Alternator Testing:
+- With engine running, battery voltage should be 13.5V-14.8V.
+- Below 13.5V = alternator not charging properly.
+- Above 15V = overcharging — can damage battery and electronics.
+- Common failure: Worn brushes (sometimes rebuildable), failed voltage regulator (often internal to alternator), worn bearings (whining noise).
+- Alternator removal: Note belt routing, disconnect battery FIRST, remove belt, disconnect wiring.
+
+Battery Drain (Parasitic Draw):
+- Car dies overnight with good battery and alternator.
+- Test: Connect ammeter in series with negative battery cable (engine off, wait 10 minutes for modules to sleep).
+- Normal parasitic draw: 25-50mA maximum.
+- Over 100mA: Find culprit by pulling fuses one at a time while watching ammeter.
+- Common causes: Trunk/glove box light staying on, aftermarket stereo, faulty module staying awake.
+
+SECTION 2: STARTING SYSTEM
+-----------------------------
+Starter Motor:
+- Click but no crank: Solenoid energizing but motor not spinning — starter failure or low voltage.
+- No click at all: Check battery voltage, neutral safety switch (auto trans), clutch switch (manual trans), ignition switch.
+- Grinding crank: Starter drive gear not fully engaging ring gear — replace starter.
+- Starter testing: Bench test with 12V applied directly, or voltage drop test on starter circuit.
+
+Ignition System:
+Spark Plugs:
+- Replacement interval: Copper: 30,000 miles, Platinum: 60,000 miles, Iridium: 90,000-100,000 miles.
+- Reading spark plugs:
+  * Light tan/gray = correct mixture — healthy
+  * Black sooty = rich mixture or oil fouling
+  * White/blistered = lean mixture or overheating
+  * Wet oily = oil burning (engine internal problem)
+  * Broken electrode = detonation/pre-ignition (check fuel octane, timing)
+- Torque to spec — overtightening damages cylinder head threads.
+
+Ignition Coils:
+- Coil-on-plug (COP) systems: Each cylinder has its own coil.
+- Test: Swap coil to different cylinder — if misfire moves, coil is faulty.
+- Resistance test: Primary winding typically 0.5-2 ohms, secondary 8,000-15,000 ohms.
+- Symptoms: Rough idle, misfire codes (P0301-P0308), reduced power.
+
+SECTION 3: SENSORS AND ACTUATORS
+-----------------------------------
+Oxygen Sensors (O2 Sensors):
+- Upstream (before cat): Controls fuel mixture — critical for performance and economy.
+- Downstream (after cat): Monitors catalytic converter efficiency.
+- Wideband/AFR sensors: More precise, found on newer vehicles.
+- Symptoms of failure: Poor fuel economy, rough idle, failed emissions, P0130-P0167 codes.
+- Replacement interval: Every 60,000-100,000 miles (or when codes appear).
+- Torque: Typically 33 ft-lb — use anti-seize on threads.
+
+Mass Air Flow Sensor (MAF):
+- Measures amount of air entering engine.
+- Symptoms of dirty/faulty MAF: Rough idle, hesitation, poor economy, lean/rich codes.
+- Cleaning: Use ONLY MAF-specific cleaner spray — no other cleaners (will damage element).
+- Location: In air intake tube between air filter box and throttle body.
+
+Throttle Position Sensor (TPS):
+- Tells ECU how far throttle is open.
+- Symptoms: Hesitation, surging idle, poor acceleration, P0120-P0124 codes.
+- Electronic throttle body: TPS is integrated — replace throttle body assembly.
+
+Crankshaft Position Sensor (CKP):
+- Critical: Engine will not run without this signal.
+- Symptoms: No-start, stalling, intermittent cutting out especially when hot.
+- Location: Near crankshaft pulley or flywheel.
+
+Camshaft Position Sensor (CMP):
+- Works with CKP for timing.
+- Symptoms: Hard start, rough running, timing-related codes (P0340-P0349).
+
+Coolant Temperature Sensor (CTS/ECT):
+- Symptoms of failure: Engine runs rich when warm, poor fuel economy, overheating warning with no actual overheating, fan doesn't engage.
+- Note: Separate sensor for gauge (sends to dashboard) and ECU — can be two separate sensors.
+
+SECTION 4: LIGHTING AND ACCESSORIES
+--------------------------------------
+Headlights:
+- Halogen: Replace yourself — handle new bulb with gloves (skin oils cause hot spots).
+- HID/Xenon: High voltage — discharge capacitors before touching, or replace assembly.
+- LED headlights: Usually replace whole assembly. Some have replaceable LED drivers.
+- Yellowed/hazy headlight lens: Polish with headlight restoration kit (sanding + UV coating).
+
+Fuses and Relays:
+- Fuse box locations: Usually under dashboard (interior) and in engine bay (power distribution box).
+- Blown fuse: Always replace with same amp rating. Never use higher amp fuse — fire risk.
+- Find circuit: Use fuse box diagram on lid cover or owner's manual.
+- Relay testing: Swap with identical relay from another circuit to test.
+- Common relay issues: Horn, cooling fan, fuel pump, starter relay.
+
+Grounds:
+- Poor ground = gremlins. Electrical problems that are intermittent often trace to bad grounds.
+- Main ground locations: Battery negative to chassis, battery negative to engine block, engine block to chassis.
+- Check by cleaning ground contact points to bare metal and retightening.
+- Symptoms of poor ground: Dim lights, gauges behaving erratically, multiple unrelated electrical faults.
+
+SECTION 5: VEHICLE RESTORATION ELECTRICAL
+-------------------------------------------
+Wiring Harness Restoration:
+- Old wiring: Check for cracked insulation, rodent damage, heat damage, splices.
+- Repair methods: Solder and heat shrink (best), crimp connectors (acceptable), tape only (not acceptable long-term).
+- Full harness replacement: Available for classic vehicles from specialty suppliers (e.g., American Autowire, Ron Francis Wiring).
+- Fuse panel upgrade: Replace old glass fuse panels with modern blade fuse/relay panels for reliability.
+
+Classic Car Conversion to 12-Volt (from 6-Volt):
+- Most pre-1955 American vehicles were 6-volt positive ground systems.
+- Conversion requires: 12V battery, 12V alternator/generator, all light bulbs, 12V coil, resistor or resistor wire for some applications.
+- Rewire: All original wiring too small for 12V conversion — full rewire recommended.
+- Keep 6-volt if originality is priority — 6-volt components are still available.

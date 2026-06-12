@@ -1,0 +1,136 @@
+BRAKES, SUSPENSION AND STEERING REPAIR GUIDE
+=============================================
+
+SECTION 1: BRAKE SYSTEM
+--------------------------
+Brake Pad Replacement:
+Symptoms of worn pads:
+- Squealing (wear indicator touching rotor — replace soon)
+- Grinding (metal on metal — replace immediately, rotor likely damaged)
+- Pulsating pedal (warped rotors)
+- Increased stopping distance
+- Brake warning light (low pad sensor on some vehicles)
+
+Pad thickness measurement:
+- New pad: ~10-12mm
+- Service limit: 2-3mm minimum
+- Replace when: 3mm or less (do not wait for grinding)
+
+Brake Rotor Inspection:
+- Measure rotor thickness with micrometer.
+- Minimum thickness is stamped on rotor edge (e.g., "MIN THICK 20MM").
+- Check for deep grooves, heat cracks (spider-web cracks = replace immediately).
+- Runout measurement: Max 0.002" (0.05mm) runout — above this causes pedal pulsation.
+- Replace or machine (turn) rotors when replacing pads if worn or grooved.
+
+Brake Caliper Issues:
+- Sticking caliper: One wheel overheats, drags, vehicle pulls when braking.
+- Seized piston: Can't compress piston to install new pads — replace caliper.
+- Caliper rebuild: Replace rubber seals and boots if piston not severely corroded.
+
+Brake Fluid Service:
+- Brake fluid absorbs moisture over time (hygroscopic) — reduces boiling point.
+- Change interval: Every 2 years or 30,000 miles regardless of appearance.
+- Types: DOT 3, DOT 4, DOT 5.1 (glycol-based, mixable), DOT 5 (silicone, NOT mixable).
+- Always use manufacturer-specified type. Never mix DOT 5 with others.
+- Test: Brake fluid test strip checks moisture content.
+
+Brake Bleeding Procedure:
+- Bleed order: Start furthest from master cylinder (typically RR, LR, RF, LF).
+- Two-person method: Helper pumps pedal, holds on "down," you open bleeder screw, close before pedal rises.
+- Speed bleeder / vacuum bleeder: One-person method.
+- Bleed until no air bubbles, fluid runs clear.
+
+ABS System:
+- ABS warning light: Scan for codes. Common causes: Wheel speed sensor failure, tone ring damage.
+- Do NOT attempt to fix ABS without proper scan tool.
+- ABS pump/module: Expensive, often requires programming.
+- Vehicle still stops without ABS but loses anti-lock function.
+
+SECTION 2: SUSPENSION SYSTEM
+-------------------------------
+Shock Absorbers and Struts:
+
+Signs of worn shocks/struts:
+- Bouncing excessively after bumps (more than 1-2 bounces)
+- Nose dive under braking
+- Body roll in corners
+- Uneven/cupping tire wear
+- Clunking over bumps
+- Vehicle sits lower on one corner
+
+Strut replacement:
+- Always replace in pairs (both fronts or both rears).
+- Quick strut assembly: Easiest — strut, spring, mount as one unit.
+- Individual strut: Requires spring compressor to safely remove spring (dangerous without correct tool).
+- Coilovers: Adjustable height/damping, used for performance or restoration lowering.
+- After replacement: Alignment required.
+
+Ball Joints:
+- Worn ball joints are DANGEROUS — can separate causing complete loss of control.
+- Test: Jack up vehicle, grasp tire at top and bottom, check for vertical play.
+  Upper: More than 1/8" play = replace.
+  Lower: Most have zero tolerance — any play = replace.
+- Grease-able ball joints should be greased at every oil change.
+
+Tie Rod Ends:
+- Check: Grasp tie rod, try to move in/out — any play = replace.
+- Symptoms: Wandering steering, uneven tire wear, clunking on turns.
+- Always check alignment after replacement.
+
+Wheel Bearings:
+- Symptoms: Humming/growling noise that changes with speed, not with engine RPM.
+  * Noise louder on left turns = right wheel bearing (load shifts to right bearing).
+  * Noise louder on right turns = left wheel bearing.
+- Test: Jack vehicle safely, spin wheel by hand — rough/grinding feeling = bad bearing.
+- Modern integrated hub assemblies: Replace entire hub unit.
+- Pressed-in bearings: Require press to remove/install.
+
+Control Arm Bushings:
+- Symptoms: Clunking over bumps, poor alignment retention, vehicle handling feels vague.
+- Inspect for cracking, tearing, or complete failure of rubber.
+- Polyurethane vs rubber: Poly is firmer and longer lasting but transmits more road noise.
+
+SECTION 3: STEERING SYSTEM
+-----------------------------
+Power Steering (Hydraulic):
+
+Low power steering fluid:
+- Symptoms: Heavy steering, whining when turning wheel.
+- Check reservoir — add correct fluid (PS fluid or specific type per manufacturer).
+- Milky fluid = water contamination — flush system.
+
+Power Steering Pump Failure:
+- Symptoms: Loud whining/moaning, especially on full lock turns.
+- Test: Pressure test with PS pressure gauge.
+- Replacement: Prime new pump by filling reservoir and turning wheel lock-to-lock multiple times.
+
+Power Steering Rack Leak:
+- Signs: Fluid on ground under steering rack, boots wet with fluid.
+- Minor leak: PS stop leak additives (temporary fix only).
+- Proper fix: Rebuild or replace steering rack.
+
+Electric Power Steering (EPS):
+- No fluid to check.
+- EPS warning light: Usually a fault code — scan with OBD reader.
+- Common faults: Torque sensor, EPS control module, motor failure.
+- Do NOT attempt to overpower or manually steer if EPS fails — get power steering service.
+
+Steering Alignment:
+Types:
+- Toe: Most critical — incorrect toe destroys tires rapidly (feathering wear pattern).
+- Camber: Tilt of wheel — important for tire wear and handling.
+- Caster: Forward/backward tilt of steering axis — affects straight-line stability.
+
+When alignment is needed:
+- After any suspension/steering component replacement.
+- After hitting a large pothole or curb.
+- If vehicle pulls to one side.
+- If steering wheel is off-center.
+- Annually on older vehicles.
+
+Tire Rotation and Balance:
+- Rotation interval: Every 5,000-7,500 miles.
+- Patterns: Front-to-rear (directional), cross-rotate (non-directional).
+- Balance: Rebalance when vibration felt in steering wheel (typically front tires) or seat (rear tires).
+- Vibration at specific MPH that goes away = unbalanced tire/wheel.

@@ -1,0 +1,190 @@
+COMPREHENSIVE OBD-II FAULT CODE REFERENCE
+==========================================
+
+HOW OBD-II WORKS
+------------------
+OBD-II (On-Board Diagnostics) has been mandatory on all US vehicles since 1996.
+The system monitors hundreds of vehicle parameters and stores fault codes when something is out of spec.
+Code format: Letter + 4 digits (e.g., P0301)
+- P = Powertrain (engine, transmission)
+- B = Body (airbags, climate control)
+- C = Chassis (ABS, traction control)
+- U = Network/Communication
+
+Code types:
+- P0xxx = Generic (SAE standard — same across all brands)
+- P1xxx = Manufacturer specific (varies by brand)
+
+POWERTRAIN CODES (P-Codes)
+============================
+
+FUEL AND AIR METERING
+-----------------------
+P0087 - Fuel Rail/System Pressure Too Low
+Symptoms: Hard start, stalling, rough running
+Causes: Weak fuel pump, clogged fuel filter, fuel pressure regulator failure, leaking injectors
+Diagnosis: Connect fuel pressure gauge to fuel rail. Spec typically 40-65 PSI. Key ON (no start) should show pressure immediately.
+Fix: Replace fuel filter first (cheap). If pressure still low, test fuel pump. Check for injector leak-down.
+
+P0089 - Fuel Pressure Regulator Performance
+Causes: Faulty pressure regulator, contaminated regulator, fuel return line blocked
+Fix: Test regulator with gauge — pressure should hold when engine is turned off (vacuum line disconnected on vacuum-referenced regulators).
+
+P0100-P0104 - Mass Airflow Sensor Circuit
+P0101 = MAF Performance (most common)
+Symptoms: Rough idle, hesitation on acceleration, lean/rich codes present too
+Causes: Dirty MAF sensor, air filter very dirty, air leak after MAF, faulty sensor
+Fix: Clean MAF sensor with MAF cleaner spray (3-minute fix, try this first). Replace if cleaning doesn't resolve.
+
+P0106 - Manifold Absolute Pressure (MAP) Sensor Performance
+Causes: Vacuum leak to MAP sensor, dirty or faulty MAP sensor
+Fix: Check vacuum hose connection to MAP sensor. Clean or replace.
+
+P0107/P0108 - MAP Sensor Circuit Low/High
+Causes: Faulty MAP sensor, wiring issue, vacuum line disconnected
+Diagnosis: Check voltage at sensor (reference 5V, signal wire should vary 0.5-4.5V with vacuum).
+
+P0111-P0113 - Intake Air Temperature Sensor
+Usually minor — check wiring and sensor. Often integrated with MAF sensor.
+
+P0116-P0118 - Engine Coolant Temperature Sensor
+P0128 = Coolant temp below thermostat regulating temperature (most common)
+Causes: Thermostat stuck open (engine never reaches temp)
+Symptoms: Engine never warms up fully, heater weak, poor fuel economy
+Fix: Replace thermostat. Inexpensive fix.
+
+FUEL MIXTURE CODES
+-------------------
+P0171 - System Too Lean, Bank 1
+P0172 - System Too Rich, Bank 1
+P0174 - System Too Lean, Bank 2
+P0175 - System Too Rich, Bank 2
+
+Lean codes (P0171, P0174):
+Top causes:
+1. Vacuum leak (intake manifold gaskets, brake booster hose, PCV hose, throttle body gasket)
+2. Dirty MAF sensor
+3. Weak fuel pump / low fuel pressure
+4. Clogged fuel filter
+5. Faulty upstream O2 sensor giving wrong reading
+
+Diagnosis: With scan tool, watch Short Term Fuel Trim (STFT) and Long Term Fuel Trim (LTFT). Lean = positive numbers. LTFT above +10% = lean condition.
+
+Rich codes (P0172, P0175):
+Top causes:
+1. Leaking fuel injectors
+2. Faulty MAF sensor reading too high
+3. Faulty O2 sensor (stuck rich)
+4. High fuel pressure
+
+IGNITION AND MISFIRE CODES
+----------------------------
+P0300 - Random/Multiple Cylinder Misfire
+P0301 - Cylinder 1 Misfire
+P0302 - Cylinder 2 Misfire
+P0303 - Cylinder 3 Misfire
+P0304 - Cylinder 4 Misfire
+P0305 - Cylinder 5 Misfire
+P0306 - Cylinder 6 Misfire
+P0307 - Cylinder 7 Misfire
+P0308 - Cylinder 8 Misfire
+
+Diagnosis approach:
+1. Note which cylinder(s) — random (P0300) vs specific
+2. Start with cheapest fixes first:
+   Step 1: Replace spark plugs (if overdue)
+   Step 2: Swap ignition coil (COP systems) to another cylinder — if misfire follows, bad coil
+   Step 3: Swap fuel injector — if misfire follows, bad injector
+   Step 4: Compression test — if one cylinder low, mechanical problem
+   Step 5: Leak-down test to find where compression is escaping
+
+P0325-P0332 - Knock Sensor Circuit
+Symptoms: Possible hesitation, ECU may retard timing (reducing power/economy)
+Causes: Faulty knock sensor, wiring, or actual engine detonation
+Note: On some engines (GM V8 especially), sensor replacement is involved as it's under intake manifold.
+
+CATALYST AND OXYGEN SENSOR CODES
+----------------------------------
+P0130-P0167 - Oxygen Sensor Codes
+P0130 = O2 Sensor Circuit, Bank 1 Sensor 1 (upstream)
+P0136 = O2 Sensor Circuit, Bank 1 Sensor 2 (downstream)
+
+Before replacing O2 sensors:
+- Check for exhaust leaks near sensor (air intrusion causes false lean reading)
+- Check for oil burning (contaminates sensor)
+- Verify actual sensor voltage behavior with scan tool live data
+- Upstream sensor should oscillate rapidly (rich/lean switching)
+- Downstream sensor should be relatively steady
+
+P0420 - Catalyst System Efficiency Below Threshold, Bank 1
+P0430 - Catalyst System Efficiency Below Threshold, Bank 2
+Very common code. Causes:
+1. Failing catalytic converter (most common, most expensive)
+2. Oil burning (contaminates catalyst)
+3. Coolant entering exhaust (head gasket)
+4. Exhaust leak before catalyst
+5. Faulty downstream O2 sensor
+Diagnosis: First rule out exhaust leak and check downstream O2 sensor behavior before buying a catalytic converter.
+
+EVAP SYSTEM CODES
+------------------
+P0440 - Evaporative Emission System Malfunction
+P0442 - Small Evaporative Emission Leak
+P0455 - Large Evaporative Emission System Leak
+P0446 - Evaporative Emission Vent Control Circuit
+
+P0455 Large Leak — First checks:
+1. Tighten or replace gas cap (free fix — most common cause)
+2. Clear code and drive 2-3 days before condemning anything
+3. If returns: Smoke test the EVAP system to find leak
+4. Check EVAP purge valve (can be heard/felt clicking when commanded ON)
+5. Check vent valve near fuel tank
+
+P0442 Small Leak:
+Usually requires smoke machine to find.
+Common locations: Charcoal canister, hoses, purge valve
+
+EGR CODES
+----------
+P0400-P0409 - EGR System
+P0401 = EGR Insufficient Flow
+
+Causes: Clogged EGR passages (carbon buildup), faulty EGR valve, vacuum line to valve
+Diagnosis: Remove EGR valve — inspect for carbon deposits. Passages should be open. Clean with carburetor cleaner.
+Fix: Clean EGR valve and passages, replace gasket. Replace valve if mechanically stuck.
+
+TRANSMISSION CODES
+-------------------
+P0700 - Transmission Control System Malfunction (general)
+P0715 - Input/Turbine Speed Sensor Circuit
+P0720 - Output Speed Sensor Circuit
+P0730 - Incorrect Gear Ratio
+P0740-P0744 - Torque Converter Clutch Circuit
+P0750-P0785 - Shift Solenoid Codes
+
+For transmission codes:
+- Check transmission fluid FIRST (level and condition)
+- Use manufacturer-specific scan tool for full transmission data
+- Many transmission codes are fluid-related (dirty/low fluid causing solenoid sluggishness)
+
+ABS CODES
+----------
+C0035-C0051 - Wheel Speed Sensor Codes
+Most common ABS code category.
+Symptoms: ABS light on, traction control may be disabled
+Causes: Faulty wheel speed sensor, damaged tone ring, wiring chafing near wheel
+Diagnosis: With scan tool, watch wheel speed data — faulty sensor will read differently from others or drop to zero.
+Fix: Replace sensor (relatively inexpensive, accessible).
+
+C0110 - ABS Pump Motor Circuit
+C0265 - ABS Actuator Relay
+More serious codes — often require professional diagnosis.
+
+GENERAL DIAGNOSIS TIPS
+-----------------------
+1. Always check for multiple codes — one problem can trigger several codes. Fix root cause.
+2. Research TSBs (Technical Service Bulletins) for your specific vehicle — manufacturer-known fixes.
+3. Freeze frame data: When code was stored, ECU saves operating conditions — use this data for diagnosis.
+4. Don't clear codes before diagnosis — the stored data helps narrow down the problem.
+5. Pending codes: Code stored but not yet confirmed — monitor drive cycle for confirmation.
+6. Mode 6 data: Advanced — shows raw test results that can help even when no code is stored.

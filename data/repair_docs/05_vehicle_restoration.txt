@@ -1,0 +1,153 @@
+CLASSIC VEHICLE RESTORATION GUIDE
+====================================
+
+SECTION 1: RESTORATION PLANNING AND ASSESSMENT
+-------------------------------------------------
+Project Assessment - The Three Questions:
+1. What is the vehicle's current condition? (Rust, mechanical, interior)
+2. What is the end goal? (Driver, show car, restomod, concours)
+3. What is the budget and timeline?
+
+Rust Assessment (Most Critical Factor):
+Rust Categories:
+- Surface rust: Just the paint/surface — easiest to fix.
+- Scale rust: Bubbling, texture under surface — requires grinding and treatment.
+- Penetrating rust: Holes, structural rust — requires metal fabrication.
+
+Where to look:
+- Floor pans (lift carpet, check from underneath)
+- Frame rails and crossmembers (use light and mirror)
+- Rocker panels (between front and rear doors, often hidden by trim)
+- Wheel arches (upper inner and outer)
+- Trunk floor and spare tire well
+- Lower firewall
+- Door bottoms and window seals
+- Battery tray area
+
+Rust Severity Guide:
+- Surface/light scale: DIY repair possible — grind, treat, fill, paint.
+- Moderate panel rust: Some panel fabrication or replacement needed.
+- Severe structural rust: Frame damage — requires professional metal fabrication or frame-off restoration.
+- Beyond economical repair: More rust than solid metal — walk away unless the vehicle has exceptional value.
+
+Budget Planning for Restoration:
+Basic driver restoration:
+- Engine rebuild: $1,500-$4,000
+- Transmission service/rebuild: $500-$2,500
+- Brake system: $500-$1,500
+- Suspension rebuild: $1,000-$3,000
+- Basic bodywork and paint: $5,000-$15,000
+- Interior: $1,000-$5,000
+- Total rough estimate: $10,000-$30,000+
+
+Full show-quality restoration: $30,000-$100,000+
+
+SECTION 2: ENGINE RESTORATION
+--------------------------------
+Engine Assessment:
+- Compression test: All cylinders should be within 10% of each other. Below 100 PSI = rebuild.
+- Leak-down test: More precise — pressurize cylinder, measure leakage. Over 20% = worn rings/valves.
+- Oil pressure: Cold start should show 40-60 PSI, idle warm minimum 10 PSI per 1000 RPM.
+- Check for: Cracks in block/head, worn journals (measure with micrometer), cam lobe wear.
+
+Engine Rebuild Basics:
+Short block rebuild (bottom end):
+1. Disassemble and clean all parts (hot tank or solvent cleaning).
+2. Measure all bores, journals, tolerances.
+3. Machine work: Bore cylinders, hone, grind crankshaft journals if needed.
+4. New parts: Piston rings, rod and main bearings, gasket set.
+5. Assembly: Use plastigage to verify bearing clearances, torque to spec in sequence.
+
+Cylinder head work:
+- Valve job: Grind valve seats and faces for proper seal.
+- Valve guides: Check for wear, replace or knurl if worn.
+- Head surface: Machine flat if warped (check with straightedge).
+- Springs: Check spring pressure, replace if at or below spec.
+
+Popular Classic Engine Rebuilds:
+- Small Block Chevy (283/327/350): Most parts available, many rebuild kits, extremely common.
+- Ford Windsor (289/302/351W): Well-supported, many aftermarket options.
+- Mopar 318/360: Durable, less glamorous but very reliable.
+- Pontiac 400/455: Torque monsters, parts harder to find.
+
+SECTION 3: BODY AND PAINT RESTORATION
+---------------------------------------
+Body Work Process:
+1. Disassembly: Remove all chrome, trim, glass, rubber.
+2. Strip paint: Media blast (gentlest), chemical strip, or sand.
+3. Rust repair: Cut out rust, weld in patch panels or new metal.
+4. Body work: Straighten panels, lead or filler for imperfections.
+5. Primer: Epoxy primer (best corrosion protection), then filler primer.
+6. Block sanding: Achieve flat, straight panels.
+7. Sealer/base coat/clear coat: Professional paint application.
+
+Body Panel Straightening:
+- Dent repair tools: Body hammers, dollies, body spoons.
+- Pulling: Stud welder puller, frame straightening equipment.
+- Filler (Bondo): Used for small imperfections only — not for large areas or structural repair.
+- Lead filling: Traditional method, superior but requires skill and safety precautions (lead dust is toxic).
+
+Welding for Body Work:
+- MIG welding: Most common for patch panels, floor pans.
+- Spot welding: Factory method for panel joining.
+- Tig welding: Cleanest welds, good for thin metal and visible areas.
+- Metal thickness: Body panels are typically 18-20 gauge — control heat to prevent warping.
+
+Paint Systems:
+- Single stage: Color only, no clear coat (original for most pre-1980s cars), easier to spot repair.
+- Base coat/clear coat: Modern standard, deeper shine, harder to spot repair.
+- Urethane: Durable, most commonly used today.
+- Lacquer: Traditional, beautiful depth, original for classics but not durable (chips, cracks over time).
+- Color matching: Provide paint code (door jamb sticker on most vehicles) for proper match.
+
+Rust Prevention After Repair:
+- Internal cavities: Cavity wax or rust-inhibiting oil in door cavities, frame rails, rocker panels.
+- Undercoating: Rubberized undercoating on floor pans and undercarriage.
+- Epoxy primer: Best foundation — excellent moisture barrier.
+- POR-15: Excellent for treating existing rust and painting over it as a sealer.
+
+SECTION 4: INTERIOR RESTORATION
+----------------------------------
+Upholstery:
+- Seat foam: Replace if compressed or crumbling. Universal foam can be cut to shape.
+- Vinyl restoration: Clean with vinyl cleaner, condition, professional dye if faded.
+- Leather: Clean and condition regularly. Professional re-dye or replacement for severe cracks.
+- Carpet: Cut and bound carpet kits available for most classics. Jute underlayment for sound deadening.
+- Headliner: Sagging headliner — re-glue with headliner adhesive or replace board and fabric.
+
+Dashboard Restoration:
+- Cracked dashpads: Repair with dashboard repair kit, cover with new vinyl, or source replacement.
+- Gauge restoration: Clean faces, restore needles, new backlighting (LED conversion).
+- Chrome trim: Polish, re-chrome, or replace with reproduction pieces.
+
+Sound Deadening:
+- Products: Dynamat, Second Skin, Fatmat — butyl rubber mats applied to floor, doors, firewall.
+- Reduces road noise, improves stereo performance.
+- Apply to: Floor pan, inside doors, trunk, firewall.
+
+SECTION 5: RESTOMOD GUIDE
+---------------------------
+Restomod Philosophy: Classic looks, modern performance and reliability.
+
+Popular Upgrades:
+Powertrain:
+- Engine swaps: LS engine swap (modern Chevy V8) very popular — fits many engine bays.
+- Fuel injection conversion: TBI or EFI kits for carbureted engines (better cold start, fuel economy, reliability).
+- Overdrive transmission: Add overdrive for highway cruising (700R4, 4L60E, Tremec 5/6-speed).
+
+Suspension:
+- Subframe connectors: Critical for unibody cars — eliminates body flex.
+- Coilover conversion: Modern adjustable coilovers for classic applications.
+- Rack and pinion steering: Converts from recirculating ball for sharper response.
+- Rear end upgrade: Change to modern rear axle with better gear ratios and disc brakes.
+
+Brakes:
+- Disc brake conversion: Front and/or rear disc from drums — major safety improvement.
+- Brake booster: Power brake conversion for better pedal feel.
+- Wilwood/Baer big brake kits: For serious performance stopping.
+
+Modern Electronics:
+- Vintage Air or Classic Auto Air: Modern A/C in period-correct housing.
+- Dakota Digital gauges: Classic look, modern sensors and accuracy.
+- Bluetooth stereo: Hidden behind original radio face.
+- LED lighting: Interior, taillights, engine bay — modern reliability.
