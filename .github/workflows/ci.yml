@@ -83,6 +83,7 @@ jobs:
           OPENAI_API_KEY: sk-test-key-for-import-check
           APP_ENV: development
           SECRET_KEY: test-secret-key
+          GROQ_API_KEY: mock-key-for-testing
         run: |
           python -c "from backend.config import settings; print('✅ Config imports OK')"
           python -c "from backend.models.database import Base, init_db; print('✅ Models imports OK')"
@@ -97,6 +98,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           APP_ENV: development
           SECRET_KEY: test-secret-key
+          GROQ_API_KEY: mock-key-for-testing
         run: |
           pytest tests/ -v --tb=short
         # If there are no tests yet, this step is skipped gracefully
