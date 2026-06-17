@@ -27,3 +27,4 @@ tiktoken==0.7.0
 
 # Logging
 loguru==0.7.2
+langchain-huggingface
