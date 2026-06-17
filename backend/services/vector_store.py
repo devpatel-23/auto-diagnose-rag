@@ -1,141 +1,116 @@
-"""
-backend/services/vector_store.py
----------------------------------
-Handles all vector embedding and semantic search operations.
-
-CONCEPTS EXPLAINED:
-- Embedding: Converting text into a list of numbers (vector) that captures meaning.
-  Similar texts produce similar vectors. "brake noise" and "squealing brakes"
-  will be close together in vector space even though the words differ.
-- Cosine similarity: How we measure closeness between vectors (angle between them).
-- pgvector: PostgreSQL extension that stores vectors and lets us do similarity search.
-- Chunking: We can't embed entire documents at once (too long). We split them
-  into overlapping chunks so no context is lost at boundaries.
-"""
-
 import os
 import re
 from typing import List, Tuple
 from loguru import logger
-from langchain_huggingface import HuggingFaceEmbeddings
 from sqlalchemy.orm import Session
 from sqlalchemy import text
+import httpx
 
 from backend.config import settings
 from backend.models.database import RepairDocument
 
-# Initialize OpenAI client once
-embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+# ─────────────────────────────────────────────
+# Cloud API Embedding Fetcher
+# ─────────────────────────────────────────────
+
+def _fetch_embedding_from_api(texts: List[str]) -> List[List[float]]:
+    """
+    Calls the Groq Cloud API to generate embeddings externally.
+    This saves 400MB+ of server RAM by avoiding hosting local models.
+    """
+    api_key = os.environ.get("GROQ_API_KEY") or settings.groq_api_key
+    if not api_key:
+        raise ValueError("GROQ_API_KEY environment variable is missing!")
+
+    # Using Groq's high-speed, industry-standard embedding model
+    url = "https://api.groq.com/openai/v1/embeddings"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "model": "nomic-embed-text-v1.5",
+        "input": texts
+    }
+
+    try:
+        with httpx.Client(timeout=30.0) as client:
+            response = client.post(url, json=payload, headers=headers)
+            response.raise_for_status()
+            data = response.json()
+            # Sort by index to maintain original document ordering
+            results = sorted(data["data"], key=lambda x: x["index"])
+            return [item["embedding"] for item in results]
+    except Exception as e:
+        logger.error(f"Failed to fetch embeddings from Groq API: {e}")
+        raise
 
 # ─────────────────────────────────────────────
 # Text Chunking
 # ─────────────────────────────────────────────
 
 def chunk_text(text: str, chunk_size: int = None, overlap: int = None) -> List[str]:
-    """
-    Splits a long document into overlapping chunks.
-    
-    WHY OVERLAP?
-    If a repair procedure spans the boundary of two chunks, we'd lose context.
-    Overlap ensures each chunk has context from the previous one.
-    
-    Example with chunk_size=20, overlap=5:
-    Text:    "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    Chunk 1: "ABCDEFGHIJKLMNOPQRST"
-    Chunk 2: "NOPQRSTUVWXYZ"        (starts 5 chars before end of chunk 1)
-    """
     chunk_size = chunk_size or settings.chunk_size
     overlap = overlap or settings.chunk_overlap
     
-    # Clean up extra whitespace
     text = re.sub(r'\n{3,}', '\n\n', text.strip())
-    
     chunks = []
     start = 0
     
     while start < len(text):
         end = start + chunk_size
-        
-        # Don't cut in the middle of a word — find last space before end
         if end < len(text):
             last_space = text.rfind(' ', start, end)
             if last_space > start:
                 end = last_space
         
         chunk = text[start:end].strip()
-        if chunk:  # Don't add empty chunks
+        if chunk:
             chunks.append(chunk)
-        
-        # Move start forward, but overlap with previous chunk
         start = end - overlap
-    
+        
     return chunks
 
-
 # ─────────────────────────────────────────────
-# Embedding Generation
+# Embedding Generation Adapters
 # ─────────────────────────────────────────────
 
 def get_embedding(text: str) -> List[float]:
-    """
-    Converts text into a vector using the local HuggingFace embedding model.
-
-    Returns a list of 384 floats (for all-MiniLM-L6-v2).
-    The vector is what gets stored in pgvector and used for similarity search.
-    """
-    # Clean text — remove excessive whitespace
-    text = text.replace('\n', ' ').strip()
-
-    if not text:
+    """Converts a single query string into a semantic vector via API."""
+    cleaned_text = text.replace('\n', ' ').strip()
+    if not cleaned_text:
         raise ValueError("Cannot embed empty text")
-
-    # embed_query is LangChain's method for single texts
-    return embedding_model.embed_query(text)
+    
+    embeddings = _fetch_embedding_from_api([cleaned_text])
+    return embeddings[0]
 
 
 def get_embeddings_batch(texts: List[str]) -> List[List[float]]:
-    """
-    Embeds multiple texts locally in one batch.
-    Much faster than calling get_embedding() in a loop.
-    """
-    texts = [t.replace('\n', ' ').strip() for t in texts if t.strip()]
-
-    # embed_documents automatically handles lists of text
-    return embedding_model.embed_documents(texts)
-
+    """Generates vectors for a list of strings efficiently in a single batch API call."""
+    cleaned_texts = [t.replace('\n', ' ').strip() for t in texts if t.strip()]
+    if not cleaned_texts:
+        return []
+        
+    return _fetch_embedding_from_api(cleaned_texts)
 
 # ─────────────────────────────────────────────
-# Document Storage
+# Document Storage & Semantic Search (Preserved)
 # ─────────────────────────────────────────────
 
-def store_document_chunks(
-    db: Session,
-    source_file: str,
-    content: str
-) -> int:
-    """
-    Full pipeline: text → chunks → embeddings → database.
-    
-    Returns the number of chunks stored.
-    """
+def store_document_chunks(db: Session, source_file: str, content: str) -> int:
     logger.info(f"Processing document: {source_file}")
-    
-    # Step 1: Split into chunks
     chunks = chunk_text(content)
     logger.info(f"  Split into {len(chunks)} chunks")
     
     if not chunks:
-        logger.warning(f"  No chunks generated from {source_file}")
         return 0
     
-    # Step 2: Get embeddings for all chunks in one batch call
     try:
         embeddings = get_embeddings_batch(chunks)
     except Exception as e:
-        logger.error(f"  Embedding failed: {e}")
+        logger.error(f"  Embedding batch pipeline execution failed: {e}")
         raise
     
-    # Step 3: Store each chunk with its embedding
     stored = 0
     for i, (chunk, embedding) in enumerate(zip(chunks, embeddings)):
         doc = RepairDocument(
@@ -152,27 +127,15 @@ def store_document_chunks(
     return stored
 
 
-# ─────────────────────────────────────────────
-# Semantic Search
-# ─────────────────────────────────────────────
-
-def search_similar_chunks(
-    db: Session,
-    query: str,
-    top_k: int = 5
-) -> List[Tuple[str, str, float]]:
+def search_similar_chunks(db: Session, query: str, top_k: int = 5) -> List[Tuple[str, str, float]]:
     if not query.strip():
         return []
 
     query_embedding = get_embedding(query)
     embedding_str = "[" + ",".join(str(x) for x in query_embedding) + "]"
 
-    from sqlalchemy import text
     sql = text(f"""
-        SELECT
-            source_file,
-            content,
-            (embedding <=> '{embedding_str}'::vector) AS distance
+        SELECT source_file, content, (embedding <=> '{embedding_str}'::vector) AS distance
         FROM repair_documents
         ORDER BY embedding <=> '{embedding_str}'::vector
         LIMIT {top_k}
@@ -181,49 +144,28 @@ def search_similar_chunks(
     try:
         result = db.execute(sql)
         rows = result.fetchall()
-        return [
-            (row.source_file, row.content, row.distance)
-            for row in rows
-            if row.distance < 1.0
-        ]
+        return [(row.source_file, row.content, row.distance) for row in rows if row.distance < 1.0]
     except Exception as e:
         db.rollback()
+        logger.error(f"Database semantic similarity operation failed: {e}")
         return []
 
 
-def format_context_for_prompt(
-    chunks: List[Tuple[str, str, float]]
-) -> str:
-    """
-    Takes raw search results and formats them into a readable context
-    block that gets injected into the LLM prompt.
-    
-    Example output:
-    [Source: engine_diagnostics.txt]
-    Brake pad replacement: Check pad thickness...
-    
-    [Source: brakes_suspension.txt]
-    ABS system: If ABS light comes on...
-    """
+def format_context_for_prompt(chunks: List[Tuple[str, str, float]]) -> str:
     if not chunks:
         return ""
-    
     context_parts = []
     for source_file, content, distance in chunks:
-        # Clean up the source filename for display
         display_name = source_file.replace("_", " ").replace(".txt", "").title()
         context_parts.append(f"[From: {display_name}]\n{content}")
-    
     return "\n\n---\n\n".join(context_parts)
 
 
 def document_count(db: Session) -> int:
-    """Returns the total number of document chunks stored."""
     return db.query(RepairDocument).count()
 
 
 def clear_all_documents(db: Session) -> None:
-    """Deletes all stored documents. Used for re-ingestion."""
     db.query(RepairDocument).delete()
     db.commit()
     logger.info("All documents cleared from vector store.")
